@@ -1,0 +1,104 @@
+Get compiler version using: ftn -V
+/opt/cray/craype/2.5.10/bin/ftn
+Cray Fortran : Version 8.5.8  Tue Dec 15, 2020  10:04:55
+<-- compiler version ----
+
+running: look_for_makedepend()
+ --> set MAKEDEPEND=$(TOOLSDIR)/xmakedepend
+
+running: check_HAVE_CLOC()
+ running: get_fortran_c_namemangling()
+ cc -h pic -dynamic -c genmake_test.c
+CC-223 craycc: WARNING File = genmake_test.c, Line = 1
+  The function "tsub" is declared implicitly.
+  void tcall( char * string ) { tsub( string ); }
+                                ^
+
+Cray C : Version 8.5.8 (20170217211354_0071b093c0867e302a5c08403fe34f8aa78fc212)
+Total warnings detected in genmake_test.c: 1
+ ftn -h pic -dynamic -c genmake_tcomp.f
+ --> set FC_NAMEMANGLE='#define FC_NAMEMANGLE(X)  X ## _'
+cc -h pic -dynamic -c genmake_tc_1.c
+ftn -h pic -dynamic -o genmake_tc genmake_tc_2.f genmake_tc_1.o
+  HELLO WORLD 1608026697.0996439
+ --> set HAVE_CLOC='t'
+
+running: check_HAVE_SETRLSTK()
+cc -h pic -dynamic -c genmake_tc_1.c
+      program hello
+      external setrlstk
+      call setrlstk()
+      end
+ftn -h pic -dynamic -o genmake_tc genmake_tc_2.f genmake_tc_1.o
+ --> set HAVE_SETRLSTK='t'
+
+running: check_HAVE_SIGREG()
+cc -h pic -dynamic -c genmake_tc_1.c
+CC-513 craycc: WARNING File = genmake_tc_1.c, Line = 22
+  A value of type "void *" cannot be assigned to an entity of type "void
+          (*)(int, siginfo_t *, void *)".
+      s.sa_sigaction = (void *)killhandler;
+                     ^
+
+Cray C : Version 8.5.8 (20170217211354_0071b093c0867e302a5c08403fe34f8aa78fc212)
+Total warnings detected in genmake_tc_1.c: 1
+      program hello
+      integer anint
+      common /iv/ anint
+      external sigreg
+      call sigreg(anint)
+      end
+ftn -h pic -dynamic -o genmake_tc genmake_tc_2.f genmake_tc_1.o
+ --> set HAVE_SIGREG='t'
+
+running: check_HAVE_STAT()
+cc -h pic -dynamic -c genmake_tc_1.c
+      program hello
+      integer nbyte
+      call tfsize(nbyte)
+      print *," HELLO WORLD", nbyte
+      end
+ftn -h pic -dynamic -o genmake_tc genmake_tc_2.f genmake_tc_1.o
+ --> set HAVE_STAT='t'
+
+running: check_netcdf_libs()
+===  genmake_tnc.F  >>>
+      program fgennc
+#include "netcdf.inc"
+      integer iret, ncid, xid
+      iret = nf_create('genmake_tnc.nc', NF_CLOBBER, ncid)
+      IF (iret .NE. NF_NOERR) write(*,*) NF_STRERROR(iret)
+      iret = nf_def_dim(ncid, 'X', 11, xid)
+      IF (iret .NE. NF_NOERR) write(*,*) NF_STRERROR(iret)
+      iret = nf_close(ncid)
+      IF (iret .NE. NF_NOERR) write(*,*) NF_STRERROR(iret)
+      end
+<<<  genmake_tnc.F  ===
+cat genmake_tnc.F |  cpp -traditional -P -DWORDLENGTH=4 -D_BYTESWAPIO -DHAVE_LAPACK -DALLOW_USE_MPI -DUSE_OMP_THREADING -DHAVE_SYSTEM -DHAVE_FDATE -DHAVE_CLOC -DHAVE_SETRLSTK -DHAVE_SIGREG -DHAVE_STAT -I/opt/cray/netcdf-hdf5parallel/4.3.3.1/cray/83/include -I/opt/cray/mpt/7.2.6/gni/mpich-cray/83/include
+ftn -h pic -dynamic  -O0 -hfp0 -c genmake_tnc.f  \ 
+  &&  ftn -h pic -dynamic  -O0 -hfp0 -o genmake_tnc.o -L/opt/cray/netcdf-hdf5parallel/4.3.3.1/cray/83/lib -L/opt/cray/mpt/7.2.6/gni/mpich-cray/83/lib
+check_netcdf: successful
+ --> set HAVE_NETCDF='t'
+
+running: check_lapack_libs()
+===  genmake_tla.F  >>>
+      program fgenla
+      integer info
+      integer ipiv( 2 )
+      double precision ab( 4, 2 ), b( 2 )
+      data ab / 0., 0., 1., 2., 0., 2., 1., 0. /
+      data b / 1., 1. /
+      call dgbsv( 2, 1, 1, 1, ab, 4, ipiv, b, 2, info )
+      IF (info .NE. 0) write(*,*) 'Error:', info
+      write(*,*) b
+      end
+<<<  genmake_tla.F  ===
+cat genmake_tla.F |  cpp -traditional -P -DWORDLENGTH=4 -D_BYTESWAPIO -DHAVE_LAPACK -DALLOW_USE_MPI -DUSE_OMP_THREADING -DHAVE_SYSTEM -DHAVE_FDATE -DHAVE_CLOC -DHAVE_SETRLSTK -DHAVE_SIGREG -DHAVE_STAT -DHAVE_NETCDF -I/opt/cray/netcdf-hdf5parallel/4.3.3.1/cray/83/include -I/opt/cray/mpt/7.2.6/gni/mpich-cray/83/include
+ftn -h pic -dynamic  -O0 -hfp0 -c genmake_tla.f  \ 
+  &&  ftn -h pic -dynamic  -O0 -hfp0 -o genmake_tla.o -L/opt/cray/netcdf-hdf5parallel/4.3.3.1/cray/83/lib -L/opt/cray/mpt/7.2.6/gni/mpich-cray/83/lib
+check_lapack: successful
+ --> set HAVE_LAPACK='t'
+
+running: check_HAVE_FLUSH()
+  check_HAVE_FLUSH: successful
+ --> set HAVE_FLUSH='t'

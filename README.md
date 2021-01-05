@@ -47,9 +47,15 @@ The full model run is longer than needed for testing purposes. This benchmark ca
     
 ### Submitting the job    
 Finally, use a job submission script to get the job onto the local scheduler, if relevant. If successful, the run will produce a set of ``STDOUT`` files that can be analysed. To get some summary statistics, use the script ``scripts/ecse_ecco_check.sh``. You can run this script on the sample output for comparison. 
+
+### Validating a run
+We can validate a run using two criteria:
+
+  1. The job should complete normally (standard output ends with ``STOP NORMAL END``)
+  2. The temperature and salinity statistics match those produced by those produced using the ``scripts/ecse_ecco_check.sh`` script, at least up to a reasonable number of decimal places. 
     
 ### Comparing with wall clock time
-The simplest comparison is wall clock time. Here are the values for ARCHER:
+The simplest performance metric is total wall clock time. Here are the total wall clock times for the benchmarking runs carried out on ARCHER:
 
     96 cores : 2.94 hours
     360 cores : 2.25 hours

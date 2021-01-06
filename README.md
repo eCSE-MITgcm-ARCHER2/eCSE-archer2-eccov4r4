@@ -45,6 +45,9 @@ The full model run is longer than needed for testing purposes. This benchmark ca
 
     nTimeSteps=13110,
     
+### Changing the tiling
+In the file ``data.exch2``, there are different options for different tile arrangements. You have to manually comment out and uncomment the appropriate lines for the selected number of cores. If these options are set incorrectly, the job will fail to pass its startup checks and will fail. 
+    
 ### Submitting the job    
 Finally, use a job submission script to get the job onto the local scheduler, if relevant. If successful, the run will produce a set of ``STDOUT`` files that can be analysed. To get some summary statistics, use the script ``scripts/ecse_ecco_check.sh``. You can run this script on the sample output for comparison. 
 

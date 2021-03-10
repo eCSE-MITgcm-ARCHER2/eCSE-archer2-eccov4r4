@@ -1,5 +1,5 @@
 # eCSE-archer2-eccov4r4
-Specific options for ECCOv4-r4 for ARCHER2 for eCSE optimisation project
+Specific options for ECCOv4-r4 for ARCHER2 for eCSE optimisation project. This repository contains the case that was used on ARCHER. *It has not been optimised for ARCHER2*. This is the starting point for our optimization activities. 
 
 ## Description of contents of repository
 

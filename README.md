@@ -2,23 +2,23 @@
 
 Specific options for ECCOv4-r4 for ARCHER2 for eCSE optimisation project. This repository contains:
  - files used and produced on Archer, taken as a basis for the port to Archer2
- - corresponding files on arcehr2 after the porting.
+ - corresponding files on Archer2 after the porting.
 
 ## Description of contents of repository
 
 ### code
- contains the SIZE.h files, the appropriate on eof which was used at compile time to create the 96, 192 and 360 core executables
+ contains the SIZE.h files, the appropriate one of which was used at compile time to create each of the 96, 192 and 360 core executables
 
-### inpit_init
+### input_init
  - input_init/NAMELIST : contains the data file used at runtime (model runtime changed to 18 months)
- - data.exch2 files, for each case of 096, 192,360 MPI processes.
+ - data.exch2 files, for each case of 096, 192,360  cases with different numbers of MPI processes.
 
 ### Archer
 This repository contains data for ECCOv4 (release 4) benchmark runs carried out on ARCHER. It includes code required to reproduce the benchmark runs, output from those runs, and some processing scripts.
 
 Directories and files:
  - build_096 : contains a genmake.log file from the build on ARCHER
- - build_360 : contains a genamke.log file from the build on ARCHER
+ - build_360 : contains a genmake.log file from the build on ARCHER
  - results : contains standard output, including profiling information, from 96 and 360 core runs
  - run_096-01 : contains job submission script
  - run_360-01 : contains job submission script
@@ -28,7 +28,6 @@ The idea is to compare the standard output (e.g. ``STDOUT.0000`` from a given ru
 
 ### Archer2
 Build, run and results files for each of the cases of 96,192,360 processes.
-The rundef and slurm scripts take the form they have as this was used in running many tests.
 
 ## How to reproduce the benchmarking run
 
@@ -81,10 +80,10 @@ The simplest performance metric is total wall clock time. Here are the total wal
     360 cores : 2.25 hours
   
 And on Archer2 (secs) using the STDOUT.0000 file with ecse_ecco_check.sh:
-    96 cores : (1 node) : 3307
+    96 cores (1 node) : 3307
     192 cores (2 nodes) : 2239
-    360 cores (3 nodes) : 1970 (We noted a wide scatter of results with 360 cores, which was not understood. This was the best of three runs)
+    360 cores (3 nodes) : 1970 
   
-Based on the processor count alone, there is low parallel efficiency (i.e. the ratio of actual speedup to the linear speedup) of 35%. This drop may represent a bottleneck in node-to-node communication.  
+Based on the processor count alone, there is low parallel efficiency (i.e. the ratio of actual speedup to the linear speedup). This  may represent a bottleneck in node-to-node communication.  
 
 The project report discusses the need to identify the cheapest (in terms of node hours), not just the fastest, configurations. This is with 96 cores. 

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/327038722.svg)](https://zenodo.org/badge/latestdoi/327038722)
+
 # eCSE-archer2-eccov4r4
 
 Specific options for ECCOv4-r4 for ARCHER2 for eCSE optimisation project. This repository contains:

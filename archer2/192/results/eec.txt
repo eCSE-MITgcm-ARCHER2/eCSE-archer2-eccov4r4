@@ -1,0 +1,283 @@
+--__--__--__--__--__--__--__--__--__--__--__--__--__--
+ 
+Checking ECCOv4-r4 run (eCSE configuration)
+ 
+Using default filename STDOUT.0000
+MITgcm (ECCOv4-r4) execution ended normally
+ 
+-----
+-----
+Global minimum potential temperature (deg C)
+-2.0286533948321E+00
+-2.1144846594963E+00
+-2.1634996186239E+00
+-1.9727243331397E+00
+-1.9853446533477E+00
+-1.9726371311308E+00
+-1.9824560059663E+00
+-----
+-----
+Global mean potential temperature (deg C)
+ 3.5868874995508E+00
+ 3.5857029507551E+00
+ 3.5774350576484E+00
+ 3.5774194679659E+00
+ 3.5809891265388E+00
+ 3.5858229710127E+00
+ 3.5851198323272E+00
+-----
+-----
+Global maximum potential temperature (deg C)
+ 3.1699320032372E+01
+ 3.2118782779183E+01
+ 3.3562227634212E+01
+ 3.2643194866384E+01
+ 3.1648224352723E+01
+ 3.0908787331461E+01
+ 3.1954680820231E+01
+-----
+-----
+Global minimum salinity (psu)
+ 2.5618195180642E+01
+ 2.3212857383103E+01
+ 2.0088527123480E+01
+ 2.2084811564972E+01
+ 2.3277142817805E+01
+ 2.4774433121878E+01
+ 2.1799325432558E+01
+-----
+-----
+Global mean salinity (psu)
+ 3.4727280983435E+01
+ 3.4727297827354E+01
+ 3.4726983946044E+01
+ 3.4726951190717E+01
+ 3.4727009599001E+01
+ 3.4727188719417E+01
+ 3.4727271457758E+01
+-----
+-----
+Global maximum salinity (psu)
+ 4.0641562601267E+01
+ 4.0641907164619E+01
+ 4.0641657105676E+01
+ 4.0641866302356E+01
+ 4.0642654585346E+01
+ 4.0645378626246E+01
+ 4.0647919875782E+01
+-----
+-----
+Global mean sea ice area (m^2/m^2)
+  4.9091188281483E-02
+  6.3455403510088E-02
+  6.1777287979539E-02
+  6.9871899426907E-02
+  5.3011003540826E-02
+  5.1876807197046E-02
+  6.2610835110708E-02
+-----
+ 
+ -------------- PROFILING ----------------- 
+ 
+Seconds in section "ALL                    [THE_MODEL_MAIN]":
+        User time: 1439.1000000000001
+      System time: 279.32999999999998
+  Wall clock time: 2239.492299079895
+
+Seconds in section "INITIALISE_FIXED       [THE_MODEL_MAIN]":
+        User time: 100.31
+      System time: 181.06
+  Wall clock time: 301.78101801872253
+
+Seconds in section "THE_MAIN_LOOP          [THE_MODEL_MAIN]":
+        User time: 1338.7900000000002
+      System time: 98.27000000000001
+  Wall clock time: 1937.7111880779266
+
+Seconds in section "INITIALISE_VARIA    [THE_MAIN_LOOP]":
+        User time: 12.739999999999995
+      System time: 1.25
+  Wall clock time: 15.701647996902466
+
+Seconds in section "MAIN LOOP           [THE_MAIN_LOOP]":
+        User time: 1326.0500000000002
+      System time: 97.02000000000001
+  Wall clock time: 1922.0095241069794
+
+Seconds in section "COST_AVERAGESFIELDS [MAIN_DO_LOOP]":
+        User time: 47.180000000004156
+      System time: 5.5400000000002194
+  Wall clock time: 55.549286365509033
+
+Seconds in section "PROFILES_INLOOP    [MAIN_DO_LOOP]":
+        User time: 59.979999999996608
+      System time: 0.35000000000002274
+  Wall clock time: 60.440140724182129
+
+Seconds in section "MAIN_DO_LOOP        [THE_MAIN_LOOP]":
+        User time: 1092.8800000002032
+      System time: 27.61999999999972
+  Wall clock time: 1287.4233646392822
+
+Seconds in section "FORWARD_STEP        [MAIN_DO_LOOP]":
+        User time: 1092.6600000002065
+      System time: 27.61999999999972
+  Wall clock time: 1287.2872457504272
+
+Seconds in section "UPDATE_R_STAR       [FORWARD_STEP]":
+        User time: 25.909999999993261
+      System time: 0.44999999999990337
+  Wall clock time: 26.449275970458984
+
+Seconds in section "LOAD_FIELDS_DRIVER  [FORWARD_STEP]":
+        User time: 26.799999999997453
+      System time: 8.7799999999999159
+  Wall clock time: 119.64339709281921
+
+Seconds in section "EXF_GETFORCING     [LOAD_FLDS_DRIVER]":
+        User time: 26.419999999998026
+      System time: 8.7199999999998852
+  Wall clock time: 119.22738909721375
+
+Seconds in section "EXTERNAL_FLDS_LOAD [LOAD_FLDS_DRIVER]":
+        User time: 5.99999999999454303E-2
+      System time: 1.00000000000193268E-2
+  Wall clock time: 6.25729560852050781E-2
+
+Seconds in section "CTRL_MAP_FORCING  [FORWARD_STEP]":
+        User time: 3.2200000000011642
+      System time: 0.43999999999991246
+  Wall clock time: 3.885662317276001
+
+Seconds in section "DO_ATMOSPHERIC_PHYS [FORWARD_STEP]":
+        User time: 2.0400000000006457
+      System time: 0.20999999999989427
+  Wall clock time: 2.1423630714416504
+
+Seconds in section "DO_OCEANIC_PHYS     [FORWARD_STEP]":
+        User time: 376.56999999993059
+      System time: 1.309999999999917
+  Wall clock time: 378.69077205657959
+
+Seconds in section "SEAICE_MODEL    [DO_OCEANIC_PHYS]":
+        User time: 75.63000000000784
+      System time: 0.8699999999999477
+  Wall clock time: 76.555938959121704
+
+Seconds in section "SEAICE_DYNSOLVER   [SEAICE_MODEL]":
+        User time: 70.750000000007276
+      System time: 0.5399999999999352
+  Wall clock time: 71.105216264724731
+
+Seconds in section "GGL90_CALC [DO_OCEANIC_PHYS]":
+        User time: 99.529999999989059
+      System time: 0.14999999999997726
+  Wall clock time: 99.88166880607605
+
+Seconds in section "DYNAMICS            [FORWARD_STEP]":
+        User time: 114.50999999998294
+      System time: 6.00000000000306954E-2
+  Wall clock time: 114.43481850624084
+
+Seconds in section "UPDATE_CG2D         [FORWARD_STEP]":
+        User time: 15.870000000003074
+      System time: 6.00000000000591172E-2
+  Wall clock time: 16.166962385177612
+
+Seconds in section "SOLVE_FOR_PRESSURE  [FORWARD_STEP]":
+        User time: 156.51999999998475
+      System time: 9.99999999999943157E-2
+  Wall clock time: 156.17680835723877
+
+Seconds in section "MOM_CORRECTION_STEP [FORWARD_STEP]":
+        User time: 9.9300000000027921
+      System time: 9.99999999999090505E-3
+  Wall clock time: 10.075270414352417
+
+Seconds in section "INTEGR_CONTINUITY   [FORWARD_STEP]":
+        User time: 11.230000000003884
+      System time: 0.18000000000006366
+  Wall clock time: 11.580472946166992
+
+Seconds in section "CALC_R_STAR         [FORWARD_STEP]":
+        User time: 1.470000000000482
+      System time: 9.99999999999090505E-3
+  Wall clock time: 1.6335160732269287
+
+Seconds in section "BLOCKING_EXCHANGES  [FORWARD_STEP]":
+        User time: 39.269999999996799
+      System time: 0.19000000000005457
+  Wall clock time: 38.676807403564453
+
+Seconds in section "THERMODYNAMICS      [FORWARD_STEP]":
+        User time: 212.64000000003375
+      System time: 0.13000000000002387
+  Wall clock time: 213.68845319747925
+
+Seconds in section "TRC_CORRECTION_STEP [FORWARD_STEP]":
+        User time: 7.99999999999272404E-2
+      System time: 0.
+  Wall clock time: 6.32765293121337891E-2
+
+Seconds in section "DO_STATEVARS_TAVE   [FORWARD_STEP]":
+        User time: 5.99999999999454303E-2
+      System time: 0.
+  Wall clock time: 6.40077590942382812E-2
+
+Seconds in section "MONITOR             [FORWARD_STEP]":
+        User time: 0.10999999999989996
+      System time: 0.
+  Wall clock time: 0.11352062225341797
+
+Seconds in section "COST_TILE           [FORWARD_STEP]":
+        User time: 5.00000000001818989E-2
+      System time: 0.
+  Wall clock time: 6.20524883270263672E-2
+
+Seconds in section "DO_THE_MODEL_IO     [FORWARD_STEP]":
+        User time: 36.830000000004475
+      System time: 14.989999999999924
+  Wall clock time: 133.86139702796936
+
+Seconds in section "DO_WRITE_PICKUP     [FORWARD_STEP]":
+        User time: 1.9299999999998363
+      System time: 0.48000000000001819
+  Wall clock time: 2.4547805786132812
+
+Seconds in section "COST_AVERAGESFIELDS [THE_MAIN_LOOP]":
+        User time: 0.15999999999985448
+      System time: 4.00000000000204636E-2
+  Wall clock time: 0.20236492156982422
+
+Seconds in section "PROFILES_INLOOP    [THE_MAIN_LOOP]":
+        User time: 0.
+      System time: 0.
+  Wall clock time: 4.81700897216796875E-3
+
+Seconds in section "ECCO_COST_DRIVER   [THE_MAIN_LOOP]":
+        User time: 125.11000000000013
+      System time: 62.77000000000001
+  Wall clock time: 516.94875192642212
+
+Seconds in section "COST_GENCOST_ALL    [ECCO SPIN-DOWN]":
+        User time: 124.8900000000001
+      System time: 62.599999999999994
+  Wall clock time: 516.05487108230591
+
+Seconds in section "CTRL_COST_DRIVER [ECCO SPIN-DOWN]":
+        User time: 0.22000000000002728
+      System time: 0.17000000000001592
+  Wall clock time: 0.89385294914245605
+
+Seconds in section "COST_FINAL         [ADJOINT SPIN-DOWN]":
+        User time: 0.
+      System time: 0.
+  Wall clock time: 1.32780075073242187E-2
+ 
+ 
+-----
+Total wall-clock time (seconds)
+: 2239.492299079895
+-----
+ 
+--__--__--__--__--__--__--__--__--__--__--__--__--__--

@@ -1,0 +1,329 @@
+export ECCO_OVERWRITEDATA=/work/n02/shared/mjmn02/ECCOv4/overwrite_data/std
+export ECCO_SRUND="block:block"
+
+export ECCO_QOS="standard"
+export ECCO_NODES=1
+export ECCO_TASKS_PER_NODE=$((${MITGCM_NPES}/$ECCO_NODES))
+export ECCO_EXE="mitgcmuv"
+
+export ECCO_TIME="02:30:00"
+
+
+
+Currently Loaded Modules:
+  1) cce/11.0.4
+  2) craype/2.7.6
+  3) craype-x86-rome
+  4) libfabric/1.11.0.4.71
+  5) craype-network-ofi
+  6) perftools-base/21.02.0
+  7) xpmem/2.2.40-7.0.1.0_2.7__g1d7a24d.shasta
+  8) cray-mpich/8.1.4
+  9) cray-libsci/21.04.1.1
+ 10) bolt/0.7
+ 11) epcc-setup-env
+ 12) load-epcc-module
+ 13) PrgEnv-cray/8.0.0
+ 14) cray-hdf5-parallel/1.12.0.3
+ 15) cray-netcdf-hdf5parallel/4.7.4.3
+
+ 
+
+Cray Fortran : Version 11.0.4
+build included ftn -em -ef -dynamic -h pic -O3 -hfp3 -Oipa5 -c ecco_cost_final.f
+expect -O3 -hfp3 -Oipa5
+srun --distribution=block:block --hint=nomultithread mitgcmuv
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+ STOP NORMAL END
+ STOP
+Run-time seconds 3312
+| 2022-04-26 12:37 | 1484100 | eO3p3a5n1_2 | 1 | standard | 256 | 96 | block:block | -O3 -hfp3 -Oipa5 | 3312 | ok |
+xthi
+Node summary for    1 nodes:
+Node    0, hostname nid004829, mpi  96, omp   1, executable xthi
+MPI summary: 96 ranks 
+Node    0, rank    0, thread   0, (affinity =    0) 
+Node    0, rank    1, thread   0, (affinity =    1) 
+Node    0, rank    2, thread   0, (affinity =    2) 
+Node    0, rank    3, thread   0, (affinity =    3) 
+Node    0, rank    4, thread   0, (affinity =    4) 
+Node    0, rank    5, thread   0, (affinity =    5) 
+Node    0, rank    6, thread   0, (affinity =    6) 
+Node    0, rank    7, thread   0, (affinity =    7) 
+Node    0, rank    8, thread   0, (affinity =    8) 
+Node    0, rank    9, thread   0, (affinity =    9) 
+Node    0, rank   10, thread   0, (affinity =   10) 
+Node    0, rank   11, thread   0, (affinity =   11) 
+Node    0, rank   12, thread   0, (affinity =   12) 
+Node    0, rank   13, thread   0, (affinity =   13) 
+Node    0, rank   14, thread   0, (affinity =   14) 
+Node    0, rank   15, thread   0, (affinity =   15) 
+Node    0, rank   16, thread   0, (affinity =   16) 
+Node    0, rank   17, thread   0, (affinity =   17) 
+Node    0, rank   18, thread   0, (affinity =   18) 
+Node    0, rank   19, thread   0, (affinity =   19) 
+Node    0, rank   20, thread   0, (affinity =   20) 
+Node    0, rank   21, thread   0, (affinity =   21) 
+Node    0, rank   22, thread   0, (affinity =   22) 
+Node    0, rank   23, thread   0, (affinity =   23) 
+Node    0, rank   24, thread   0, (affinity =   24) 
+Node    0, rank   25, thread   0, (affinity =   25) 
+Node    0, rank   26, thread   0, (affinity =   26) 
+Node    0, rank   27, thread   0, (affinity =   27) 
+Node    0, rank   28, thread   0, (affinity =   28) 
+Node    0, rank   29, thread   0, (affinity =   29) 
+Node    0, rank   30, thread   0, (affinity =   30) 
+Node    0, rank   31, thread   0, (affinity =   31) 
+Node    0, rank   32, thread   0, (affinity =   32) 
+Node    0, rank   33, thread   0, (affinity =   33) 
+Node    0, rank   34, thread   0, (affinity =   34) 
+Node    0, rank   35, thread   0, (affinity =   35) 
+Node    0, rank   36, thread   0, (affinity =   36) 
+Node    0, rank   37, thread   0, (affinity =   37) 
+Node    0, rank   38, thread   0, (affinity =   38) 
+Node    0, rank   39, thread   0, (affinity =   39) 
+Node    0, rank   40, thread   0, (affinity =   40) 
+Node    0, rank   41, thread   0, (affinity =   41) 
+Node    0, rank   42, thread   0, (affinity =   42) 
+Node    0, rank   43, thread   0, (affinity =   43) 
+Node    0, rank   44, thread   0, (affinity =   44) 
+Node    0, rank   45, thread   0, (affinity =   45) 
+Node    0, rank   46, thread   0, (affinity =   46) 
+Node    0, rank   47, thread   0, (affinity =   47) 
+Node    0, rank   48, thread   0, (affinity =   48) 
+Node    0, rank   49, thread   0, (affinity =   49) 
+Node    0, rank   50, thread   0, (affinity =   50) 
+Node    0, rank   51, thread   0, (affinity =   51) 
+Node    0, rank   52, thread   0, (affinity =   52) 
+Node    0, rank   53, thread   0, (affinity =   53) 
+Node    0, rank   54, thread   0, (affinity =   54) 
+Node    0, rank   55, thread   0, (affinity =   55) 
+Node    0, rank   56, thread   0, (affinity =   56) 
+Node    0, rank   57, thread   0, (affinity =   57) 
+Node    0, rank   58, thread   0, (affinity =   58) 
+Node    0, rank   59, thread   0, (affinity =   59) 
+Node    0, rank   60, thread   0, (affinity =   60) 
+Node    0, rank   61, thread   0, (affinity =   61) 
+Node    0, rank   62, thread   0, (affinity =   62) 
+Node    0, rank   63, thread   0, (affinity =   63) 
+Node    0, rank   64, thread   0, (affinity =   64) 
+Node    0, rank   65, thread   0, (affinity =   65) 
+Node    0, rank   66, thread   0, (affinity =   66) 
+Node    0, rank   67, thread   0, (affinity =   67) 
+Node    0, rank   68, thread   0, (affinity =   68) 
+Node    0, rank   69, thread   0, (affinity =   69) 
+Node    0, rank   70, thread   0, (affinity =   70) 
+Node    0, rank   71, thread   0, (affinity =   71) 
+Node    0, rank   72, thread   0, (affinity =   72) 
+Node    0, rank   73, thread   0, (affinity =   73) 
+Node    0, rank   74, thread   0, (affinity =   74) 
+Node    0, rank   75, thread   0, (affinity =   75) 
+Node    0, rank   76, thread   0, (affinity =   76) 
+Node    0, rank   77, thread   0, (affinity =   77) 
+Node    0, rank   78, thread   0, (affinity =   78) 
+Node    0, rank   79, thread   0, (affinity =   79) 
+Node    0, rank   80, thread   0, (affinity =   80) 
+Node    0, rank   81, thread   0, (affinity =   81) 
+Node    0, rank   82, thread   0, (affinity =   82) 
+Node    0, rank   83, thread   0, (affinity =   83) 
+Node    0, rank   84, thread   0, (affinity =   84) 
+Node    0, rank   85, thread   0, (affinity =   85) 
+Node    0, rank   86, thread   0, (affinity =   86) 
+Node    0, rank   87, thread   0, (affinity =   87) 
+Node    0, rank   88, thread   0, (affinity =   88) 
+Node    0, rank   89, thread   0, (affinity =   89) 
+Node    0, rank   90, thread   0, (affinity =   90) 
+Node    0, rank   91, thread   0, (affinity =   91) 
+Node    0, rank   92, thread   0, (affinity =   92) 
+Node    0, rank   93, thread   0, (affinity =   93) 
+Node    0, rank   94, thread   0, (affinity =   94) 
+Node    0, rank   95, thread   0, (affinity =   95) 
